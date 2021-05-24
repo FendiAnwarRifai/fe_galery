@@ -8,7 +8,7 @@
       <div class="row row-cols-1 row-cols-md-5">
             <div class=" col mb-4"  v-for="data in items" :key="data.id">
                 <div class="card">
-                <div style="overflow:hidden; height:165px;" class="d-flex align-items-center justify-content-center">
+                <div v-if="data.thumbnailUrl" style="overflow:hidden; height:165px;" class="d-flex align-items-center justify-content-center">
                   <img style="width:100%;" class="cursor" :src="data.thumbnailUrl" @click="show(data)">
                 </div>
                 <div @click="show(data)" class="cursor card-body">{{data.title.length > 15 ? data.title.substring(0, 15)+'...' : data.title.substring(0, 15) }}
